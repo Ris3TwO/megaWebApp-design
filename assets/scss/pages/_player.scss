@@ -1,0 +1,105 @@
+.player-section {
+    .acordion-custom {
+        .card,
+        .card-header {
+            box-shadow: none !important;
+            background: #F5F7FB !important;
+            border-radius: 5px !important;
+            .card-header {
+                padding: 0 !important;
+                button {
+                    text-decoration: none !important;
+                    color: $dark !important;
+                    width: 100% !important;
+                    padding: 5px 5px 5px 15% !important;
+                    text-align: left !important;
+                    &::before {
+                        content: attr(number);
+                        position: absolute;
+                        top: 10px;
+                        left: 6px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 0.510638px solid #464646;
+                        border-radius: 50%;
+                        font-size: 0.7rem !important;
+                    }
+                    &::after {
+                        content: url(../img/arrow.svg);
+                        position: absolute;
+                        top: 10px;
+                        right: 7px;
+                        width: 20px;
+                        height: 20px;
+                        transition: 0.3s ease;
+                        // background: blue;
+                        transform: scale(0.7);
+                        filter: FlipH;
+                    }
+                }
+                .collapsed {
+                    &::after {
+                        transform: scale(-0.7);
+                        filter: FlipH;
+                    }
+                }
+            }
+        }
+        .card-body hr {
+            width: 98% !important;
+        }
+        .group-check-link {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: 0.3s ease;
+            cursor: pointer;
+            .container-checkbox-box {
+                transform: scale(0.7);
+                margin-top: 3px !important;
+            }
+            .group-progress {
+                width: 85%;
+                position: relative;
+                strong {
+                    font-weight: 600 !important;
+                }
+                .progress-custom {
+                    width: 50%;
+                }
+                span {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    border: 0.892857px solid #464646;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    font-size: 0.6rem !important;
+                    text-align: center;
+                    line-height: 24px;
+                    color: $danger;
+                }
+            }
+            &:hover {
+                background: #f3f1f7;
+            }
+            &:focus {
+                background: #D4E9EE;
+                border-style: none;
+                outline: none;
+            }
+        }
+    }
+    .planes-text {
+        width: 100%;
+        @include large {
+            width: 80%;
+        }
+    }
+}

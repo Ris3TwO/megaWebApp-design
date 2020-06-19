@@ -1,0 +1,46 @@
+.megapacks-section {
+    .card-planes {
+        margin: 10px !important;
+        @include extra-large {
+            height: 250px !important;
+        }
+        .card-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    .card-extras {
+        background: #000045;
+        box-shadow: none !important;
+        margin: 10px 0 !important;
+        color: $light !important;
+        .card-hedaer,
+        .card-body {
+            color: $light !important;
+            hr {
+                background: $light !important;
+            }
+        }
+        .card-header {
+            span {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: $tertiary;
+                text-align: center;
+                line-height: 25px;
+                font-size: 0.8rem;
+            }
+        }
+        @include large {
+            width: 300px !important;
+            margin: 10px !important;
+        }
+        .switch-check {
+            transform: scale(0.8) !important;
+            margin-left: -8px !important;
+        }
+    }
+}

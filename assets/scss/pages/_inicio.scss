@@ -1,0 +1,85 @@
+//INICIANDO SECTION-INICIO 
+.inicio-section {
+    .first-section {
+        .title-first-section {
+            a {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .cursos-first-section {
+            >div {
+                background: #F5F7FB;
+                border-radius: 10px;
+            }
+            .img-curso-first {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 5px;
+                    // background: red;
+                    margin-right: 10px;
+                }
+                strong {
+                    // background: blue;
+                    font-weight: 900;
+                }
+            }
+            .progress-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center !important;
+                padding-right: 5px !important;
+                .btn-outline-primary {
+                    border: 1px solid #4C84FF !important;
+                    color: #464646 !important;
+                    position: relative;
+                    padding-right: 30px !important;
+                    &:hover {
+                        background: #4C84FF !important;
+                        color: $light !important;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 5%;
+                        right: 5px;
+                        bottom: 0;
+                        margin: auto !important;
+                        background: $danger;
+                        width: 8px;
+                        height: 10px;
+                        clip-path: polygon(100% 48%, 0 0, 0 100%);
+                    }
+                    &:hover::after {
+                        background: $light !important;
+                    }
+                }
+            }
+        }
+        .planes-first-section {
+            .card .card-body span {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 50% !important;
+                    height: 50% !important;
+                }
+            }
+            .planes-text {
+                width: 100%;
+                @include large {
+                    width: 85%;
+                }
+            }
+        }
+    }
+}

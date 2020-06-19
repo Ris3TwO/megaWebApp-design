@@ -1,0 +1,107 @@
+.megacursos-section {
+    .card-mega-custom {
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: flex-start;
+        .card-pack,
+        .card-cursos {
+            padding: 30px 20px;
+        }
+        .card-pack {
+            background: #000045;
+            width: 100%;
+            color: $light;
+            @include extra-large {
+                width: 40%;
+            }
+            .card-pack-description {
+                width: 100%;
+                // background: red;
+                padding: 0 !important;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                .img-pack {
+                    background: #F5F7FB;
+                    width: 30%;
+                    height: 100%;
+                    border-radius: 5px;
+                    padding: 5px 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 90%;
+                    }
+                }
+                .card-pack-text {
+                    width: 65%;
+                    div {
+                        width: 100%;
+                        img {
+                            display: inline-block;
+                            margin: 5px;
+                            max-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+        .card-cursos {
+            background: $light;
+            width: 100%;
+            .list-cursos {
+                width: 100%;
+                // background: red;
+                overflow: hidden;
+                overflow-y: scroll;
+                @include extra-large {
+                    height: 300px;
+                    padding-top: 10px;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                        height: 5px;
+                        display: none;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #ccc;
+                        border-radius: 4px;
+                    }
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #b3b3b3;
+                        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+                    }
+                    &::-webkit-scrollbar-thumb:active {
+                        background-color: #999999;
+                    }
+                }
+            }
+            @include extra-large {
+                width: 60%;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 40px;
+                    background: $light;
+                    position: absolute;
+                    top: 0;
+                    left: -18px;
+                    bottom: 0;
+                    margin: auto;
+                    clip-path: polygon(0 51%, 100% 100%, 100% 0);
+                }
+            }
+        }
+    }
+    .img-text-button a {
+        background: $tertiary !important;
+        color: $light !important;
+    }
+}
