@@ -1049,6 +1049,10 @@ body {
     background: #F5F7FB;
 }
 
+.fondo-five{
+    background: #D2F4E2;
+}
+
 .color-text-green {
     color: #23D160 !important;
 }
@@ -1384,6 +1388,110 @@ body {
     }
 }
 
+// Form Controls 
+.switch-check{
+    position: relative !important;
+    width:  70px;
+    height: 30px;
+    border-radius: 37.0526px;
+    box-shadow: inset 0px 4.94034px 4.94034px rgba(0, 0, 0, 0.15);
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #C4C4C4;
+        transition: .4s ease;
+        box-shadow: inset 0px 4.94034px 4.94034px rgba(0, 0, 0, 0.15);
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 2px;
+        background-color: $light;
+        transition: .4s ease;
+      }
+      
+      input:checked + .slider {
+        background-color: #23D160;
+        box-shadow: inset 0px 4.94034px 4.94034px rgba(0, 0, 0, 0.15);
+      }
+      
+      input:focus + .slider {
+        box-shadow: inset 0px 4.94034px 4.94034px rgba(0, 0, 0, 0.15);
+      }
+      
+      input:checked + .slider:before {
+        transform: translateX(37px);
+      }
+      
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    
+}
+
+.radio-custom{
+        display: block;
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
+        font-size: 22px;
+        user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #EFF0F4;
+        border-radius: 50%;
+        border: 1px solid #ced4da;
+      }
+      
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #23D160;
+        opacity: 0;
+        transition: 0.4s ease;
+      }
+      
+      input:checked ~ .checkmark:after {
+        opacity: 1;
+      }
+}
+
 .container-checkbox-box {
     display: block;
     position: relative;
@@ -1454,6 +1562,109 @@ body {
         padding: 0 !important;
     }
 }
+
+
+.acordion-custom {
+    .card,
+    .card-header {
+        box-shadow: none !important;
+        background: #F5F7FB !important;
+        border-radius: 5px !important;
+        .card-header {
+            padding: 0 !important;
+            button {
+                text-decoration: none !important;
+                color: $dark !important;
+                width: 100% !important;
+                padding: 5px 5px 5px 15% !important;
+                text-align: left !important;
+                &::before {
+                    content: attr(number);
+                    position: absolute;
+                    top: 10px;
+                    left: 6px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 0.510638px solid #464646;
+                    border-radius: 50%;
+                    font-size: 0.7rem !important;
+                }
+                &::after {
+                    content: url(../img/arrow.svg);
+                    position: absolute;
+                    top: 10px;
+                    right: 7px;
+                    width: 20px;
+                    height: 20px;
+                    transition: 0.3s ease;
+                    // background: blue;
+                    transform: scale(0.7);
+                    filter: FlipH;
+                }
+            }
+            .collapsed {
+                &::after {
+                    transform: scale(-0.7);
+                    filter: FlipH;
+                }
+            }
+        }
+    }
+    .card-body hr {
+        width: 98% !important;
+    }
+    .group-check-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+        cursor: pointer;
+        .container-checkbox-box {
+            transform: scale(0.7);
+            margin-top: 3px !important;
+        }
+        .group-progress {
+            width: 85%;
+            position: relative;
+            strong {
+                font-weight: 600 !important;
+            }
+            .progress-custom {
+                width: 50%;
+            }
+            span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                border: 0.892857px solid #464646;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                font-size: 0.6rem !important;
+                text-align: center;
+                line-height: 24px;
+                color: $danger;
+            }
+        }
+        &:hover {
+            background: #f3f1f7;
+        }
+        &:focus {
+            background: #D4E9EE;
+            border-style: none;
+            outline: none;
+        }
+    }
+}
+
+
+
+
 
 .nav-pills-custom,
 .tab-content-custom {
@@ -1590,6 +1801,18 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 // End generals class
 // Imports of files
 // General css for webapp
@@ -1600,3 +1823,4 @@ body {
 @import 'pages/megapacks.scss';
 @import 'pages/megacursos.scss';
 @import 'pages/player.scss';
+@import 'pages/detalles-curso';

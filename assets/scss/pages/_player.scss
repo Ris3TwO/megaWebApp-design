@@ -1,105 +1,173 @@
 .player-section {
-    .acordion-custom {
-        .card,
-        .card-header {
-            box-shadow: none !important;
-            background: #F5F7FB !important;
-            border-radius: 5px !important;
-            .card-header {
-                padding: 0 !important;
-                button {
-                    text-decoration: none !important;
-                    color: $dark !important;
-                    width: 100% !important;
-                    padding: 5px 5px 5px 15% !important;
-                    text-align: left !important;
-                    &::before {
-                        content: attr(number);
-                        position: absolute;
-                        top: 10px;
-                        left: 6px;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border: 0.510638px solid #464646;
-                        border-radius: 50%;
-                        font-size: 0.7rem !important;
-                    }
-                    &::after {
-                        content: url(../img/arrow.svg);
-                        position: absolute;
-                        top: 10px;
-                        right: 7px;
-                        width: 20px;
-                        height: 20px;
-                        transition: 0.3s ease;
-                        // background: blue;
-                        transform: scale(0.7);
-                        filter: FlipH;
-                    }
-                }
-                .collapsed {
-                    &::after {
-                        transform: scale(-0.7);
-                        filter: FlipH;
-                    }
-                }
-            }
-        }
-        .card-body hr {
-            width: 98% !important;
-        }
-        .group-check-link {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            transition: 0.3s ease;
-            cursor: pointer;
-            .container-checkbox-box {
-                transform: scale(0.7);
-                margin-top: 3px !important;
-            }
-            .group-progress {
-                width: 85%;
-                position: relative;
-                strong {
-                    font-weight: 600 !important;
-                }
-                .progress-custom {
-                    width: 50%;
-                }
-                span {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    margin: auto;
-                    border: 0.892857px solid #464646;
-                    border-radius: 50%;
-                    width: 25px;
-                    height: 25px;
-                    font-size: 0.6rem !important;
-                    text-align: center;
-                    line-height: 24px;
-                    color: $danger;
-                }
-            }
-            &:hover {
-                background: #f3f1f7;
-            }
-            &:focus {
-                background: #D4E9EE;
-                border-style: none;
-                outline: none;
-            }
-        }
-    }
+    
     .planes-text {
         width: 100%;
         @include large {
             width: 80%;
         }
     }
+
+
+    .numero-step {
+        margin-top: -33px;
+        background-color: #FCC11C;
+        height: 55px;
+        width: 55px;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        line-height: 32px;
+        @include transition($time: .5s);
+        @include small() {
+            margin-top: -13px;
+            height: 25px;
+            width: 25px;
+            font-size: 15px;
+            line-height: 26px;
+            @include transition($time: .5s);
+        }
+        @include medium() {
+            margin-top: -20px;
+            height: 35px;
+            width: 35px;
+            font-size: 25px;
+            line-height: 26px;
+            @include transition($time: .5s);
+        }
+        @include large() {
+            margin-top: -20px;
+            height: 55px;
+            width: 55px;
+            font-size: 36px;
+            line-height: 32px;
+            @include transition($time: .5s);
+        }
+    }
+    
+    .footer-ganardinero {
+        border: 0.583418px solid #464646;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        p{
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center ;
+            font-size: 0.8rem;
+        }
+    }
+    
+    #carousel-ganar-dinero {
+        max-height: 600px;
+    
+        .carousel-indicators{
+            position: absolute !important;
+            bottom:  -20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 100 !important;
+        }
+    
+        .carousel-control-prev-icon, .carousel-control-next-icon{
+            background: none !important;
+            border-left: 4px solid $danger;
+            border-bottom: 4px solid $danger;
+        }
+    
+    
+        .carousel-control-next-icon{
+            transform: rotate(225deg) !important;
+        }
+        .carousel-control-prev-icon {
+            transform: rotate(45deg) !important;
+        }
+    
+        .carousel-indicators li{
+            background-color: $danger !important;
+        }
+    
+    }
+    
+    .hide-slider{
+        display: block;
+        @include large{
+            display: none   !important;
+        }
+    }
+    
+    .carousel-ganardinero {
+        .carousel-item {
+            >div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 7px;
+                .title-step {
+                    margin-top: 10px;
+                    width: 80% !important;
+                    font-size: 1rem;
+                    overflow: hidden !important;
+                    font-weight: 900;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 15px;
+                }
+                .contenido {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    max-width: 350px;
+                }
+            }
+            .step-impar {
+                .icon {
+                    background-color: #D8E3F5;
+                    height: 120px;
+                    width: 120px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 7px;
+                    i {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            .step-par {
+                .icon {
+                    background-color: $danger;
+                    height: 120px;
+                    width: 120px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    border-radius: 50%;
+                    i {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .curve-carousel {
+        position: absolute;
+        margin-top: 65px;
+        z-index: -1;
+        img {
+            height: auto;
+            width: 99%;
+        }
+    }
+
+
+
 }
