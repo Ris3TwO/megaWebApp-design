@@ -1053,6 +1053,14 @@ body {
     background: #D2F4E2;
 }
 
+.fondo-six{
+    background: #000045;
+}
+
+.fondo-seven{
+    background:  #4C84FF;
+}
+
 .color-text-green {
     color: #23D160 !important;
 }
@@ -1118,8 +1126,8 @@ body {
     width: 60px !important;
     height: 60px !important;
     img {
-        width: 100% !important;
-        height: 100% !important;
+        width: 60% !important;
+        height: 60% !important;
     }
 }
 
@@ -1205,7 +1213,17 @@ body {
         width: 60% !important;
     }
     p {
-        font-weight: 400 !important;
+        font-weight: 300 !important;
+    }
+}
+
+.text-with-medium{
+    width: 100%;
+    @include extra-large {
+        width: 80% !important;
+    }
+    p {
+        font-weight: 300 !important;
     }
 }
 
@@ -1824,3 +1842,4 @@ body {
 @import 'pages/megacursos.scss';
 @import 'pages/player.scss';
 @import 'pages/detalles-curso';
+@import 'pages/detalles-ultrapack';

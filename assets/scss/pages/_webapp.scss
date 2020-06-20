@@ -68,18 +68,36 @@
         height: 100%;
         width: 30px;
         outline: none;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
         &::before {
-            content: url(../img/videlo-left.svg);
-            margin-top: 1px;
+            content: url(../img/vjs-btn-left.png);
+            transform: scale(0.3);
+            margin-top: 2px;
+        }
+        &:active{
+            opacity: 2;
         }
     }
     #vjs-btn-right {
         height: 100%;
         width: 30px;
         outline: none;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.8;
         &::before {
-            content: url(../img/video-right.svg);
-            margin-top: 20px;
+            content: url(../img/vjs-btn-right.png);
+            transform: scale(0.3);
+            margin-top: 2px;
+        }
+        &:active{
+            opacity: 2;
         }
     }
     #vjs-link-left {
@@ -238,4 +256,145 @@
             }
         }
     }
+}
+
+.detalles-ultrapack-section,.detallesCurso-section  {
+
+
+    background: #EFF0F4;
+
+    .card{
+        border-style: none !important;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        .card-header{
+            border-style: none !important;
+            border-radius: 10px 10px 0 0;
+            background: transparent !important;
+        }
+    }
+
+    .card-detalle-curso{
+        .img-card-detalle{
+            background: #F5F7FB;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            img{
+                width:  30%;
+                height: 80%;
+            }
+
+            @include large{
+                width: 100%;
+                height: 100%;
+
+                img{
+                    width: 80%;
+                    height: 70%;
+                }
+
+            }
+        }
+
+        .img-icon-detalle{
+            width: 25px;
+            height: 25px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .description-detalle{
+            span{
+                display: inline-block;
+                padding: 2px 7px !important;
+                background: #23D160;
+                border-radius: 20px;
+                font-size: 0.8rem !important;
+                text-align: center !important;
+                color: $light !important;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+    .nav-pills-custom{
+        background: transparent !important;
+        box-shadow: none !important;
+        padding-left: 0 !important;
+        .nav-link {
+            color:  #848484 !important;
+            
+        }
+        .active{
+            color: $dark !important;
+        }
+
+        
+    }
+
+
+    .slider-custom{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        .owl-carousel-custom{
+            width: 100% !important;
+            .item {
+                background: transparent !important;
+                height: 130px;
+                width: 200px;
+                margin-left: 13px !important;
+                margin-right: 13px !important;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .container-span-text{
+        width: 80% !important;
+        margin: 5px;
+        p{
+            font-size: 0.8rem !important;
+        }
+
+        @include  medium {
+            width: 30% !important;
+        }
+        
+    }
+
+    .span-circle-extra-large img{
+        width: 50% !important;
+    }
+
+    .group-check-link{
+        flex-wrap: wrap;
+
+        p{
+            width: 100% !important;
+            font-size: 0.8rem !important;
+        }
+    }
+
+    .card-option-detalle{
+        background: #000045 !important;
+        color: $light !important;
+        p strong{
+            font-weight: 900 !important;
+        }
+        a{
+            font-size: 0.8rem !important;
+        }
+    }
+
+
 }

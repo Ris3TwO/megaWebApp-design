@@ -1,0 +1,22 @@
+.detalles-ultrapack-section {
+    
+    .slider-small{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        .owl-carousel-custom{
+            width: 100% !important;
+            .item {
+                background: transparent !important;
+                height: 30px;
+                width: 30px;
+                margin-left: 20px !important;
+                margin-right: 20px !important;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
